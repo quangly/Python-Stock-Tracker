@@ -1,0 +1,32 @@
+Reference 
+Mac Maverick's Environment
+http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/
+Python Mac Environment
+http://hackercodex.com/guide/python-development-environment-on-mac-osx/
+
+
+#mac osx install
+#install brew package manager for mac
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+#Install Python3
+brew install python3
+
+#install pip
+sudo easy_install pip
+
+#install virtualenv
+sudo pip install virtualenv
+
+#create virtualenv
+virtualenv myenv
+
+#install requirements
+pip install -r setup/dev-requirements.txt
+
+#Unit Testing
+sniffer -x tests.test_helper.test_helper -x--nocapture -x--verbose
+
+#install iPython Notebook
+pip install "ipython[notebook]"
